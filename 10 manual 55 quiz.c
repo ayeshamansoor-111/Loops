@@ -1,0 +1,141 @@
+#include <stdio.h> 
+int main() {
+    int E1, E2, E3, E4, E5, H1, H2, H3, H4, H5; 
+    char level, retry; 
+    int score = 0; 
+    printf("           'The Outsiders' by S.E. Hilton            "); 
+    do {
+        printf("State the quiz difficulty level! Easy/Hard?\n"); 
+        scanf("%c", &level); 
+        switch (level) {
+            case 'E': 
+            printf("Your difficulty level is easy! For each correct answer you will get +10 points!\n"); 
+            // Q1 easy
+            printf("What was the name of the Soc girl who talked to Ponyboy in the book?\n");
+            printf("1.Sandy\n2.Marcia\n3.Cherry Valance\n4.Katy"); 
+            scanf("%d", &E1); 
+            if (E1 == 3) {
+            printf("Your answer is correct. You get +10 points!\n");
+            score = score + 10;
+            } else {
+             printf("Your answer is incorrect! The correct answer is cherry valence!\n"); }
+            // Q2 easy
+            printf("What the name of the book that Jonny Cade read to Ponyboy?\n"); 
+            printf("1.Gone with the wind\n2.Peter Pan\n3.Lord of the flies\n4.The Emerald City of Oz"); 
+            scanf("%d", &E2); 
+            if (E2 == 1) {
+            printf("Your answer is correct. You get +10 points!\n");
+            score = score + 10; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is Gone with the Wind!\n"); 
+            }
+            // Q3 easy 
+            printf("What is the name of the brother that is older than PonyBoy?\n"); 
+            printf("1.Dally\n2.Two bit Matthews\n3.Winston\n4.Sodapop"); 
+            scanf("%d", &E3); 
+            if (E3 == 4) {
+             printf("Your answer is correct. You get +10 points!\n");
+            score = score + 10; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is Sodapop!\n"); 
+            }
+            // Q4 easy 
+            printf("Which subject was Ponyboy good at?\n") 
+            printf("1.Maths\n2.Geography\n3.English\n4.Latin"); 
+            scanf("%d", &E4); 
+            if (E4 == 3) {
+              printf("Your answer is correct. You get +10 points!\n");
+            score = score + 10; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is English!\n"); 
+            }
+             // Q5 easy 
+             printf("What was the last thing written on Jonny's Letter to Ponyboy?"); 
+             print("1.Take care\n2.Stay Gold, Ponyboy\n3.GoodBye\n4.See you later"); 
+             scanf("%d", &E5); 
+             if (E5 == 2) {
+             printf("Your answer is correct. You get +10 points!\n");
+            score = score + 10; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is Stay Gold, Ponyboy!\n"); 
+             }
+            if (score == 10 || score == 20) {
+            printf("Grade B"\n); 
+            } else {
+             if (score == 30 || score == 40) {
+             printf("Grade A");
+             } else { 
+              printf("Grade A+"); 
+              break; 
+// Hard Mode 
+case 'H': 
+printf("Your difficulty level is hard! For each correct answer you will get +20 points!\n"); 
+// Q1 hard 
+printf("What was the actor that Ponyboy wished he looked like?\n"); 
+printf("1.Paul Newman\n2.Steve Harvey\n3.Tom cruise\n4.Harrison Ford"); 
+scanf("%d", H1); 
+if (H1 == 1) {
+ printf("Your answer is correct. You get +20 points!\n");
+            score = score + 20; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is Paul Newman!\n"); 
+}
+             // Q2 hard 
+             printf("What was the poem that Ponyboy quotted in the book?\n"); 
+             printf("1.The road not taken\n2.Fire and Ice\n3.Mending Wall\n4.Nothing Gold can Stay"); 
+             scanf("%d", H2); 
+             if (H2 == 4) { 
+             printf("Your answer is correct. You get +20 points!\n");
+            score = score + 20; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is Nothing Gold can Stay\n");
+             }
+             // Q3 hard 
+             printf("What team was Darry the captain of?\n"); 
+             printf("1.Football\n2.Tennis\n3.Swimming\n4.Lacrosse"); 
+             scanf("%d", H3); 
+             if (H3 == 1) {
+              printf("Your answer is correct. You get +20 points!\n");
+            score = score + 20; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is Football\n");
+             }
+             // Q4 hard 
+             printf("Who killed himself after hearing of Jonnycake's death?\n");  
+             printf("1.Dally\n2.Darry\n3.Sodapop\n4.Tim"); 
+             scanf("%d", H4); 
+             if (H4 == 1) {
+              printf("Your answer is correct. You get +20 points!\n");
+            score = score + 20; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is Dally\n");
+             }
+             // Q5 hard 
+             printf("What car were the guys driving when they jumped Ponyboy in the first chapter?\n"); 
+             printf("1.Blue Mustang\n2.Red Corvair\n3.Green Porsche\n4.Yellow Camaro"); 
+             scanf("%d", H5); 
+             if (H5 == 2) {
+              printf("Your answer is correct. You get +20 points!\n");
+            score = score + 20; 
+            } else {
+             printf("Your answer is incorrect! The correct answer is Red Corvair\n");
+             }
+             // score 
+             if (score == 20 || score == 40) {
+             printf("Grade B!\n");
+              } else {
+                if (score == 60 || score == 80) {
+                    printf("Grade A!\n"); 
+                } else printf("Grade A+!\n"); 
+                break; 
+
+                default:printf("Wrong Selection\n"); 
+              }
+            printf("\nfinal score = %d", score); 
+            printf("\nDo you want to play again?Y/n  ");
+            scanf("%c", retry);
+        } 
+        while (retry == Y); 
+        printf("Program Ended\n"); 
+    }
+    return 0;
