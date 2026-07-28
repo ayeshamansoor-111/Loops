@@ -1,0 +1,22 @@
+#include <stdio.h> 
+int main () {
+    int rows, columns, num = 1; 
+    printf("Enter the number of rows >>  "); 
+    scanf("%d", &rows); 
+    printf("Enter the number of columns >>  "); 
+    scanf("%d", &columns); 
+    int matrix[rows][columns]; 
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) { 
+    matrix[i][j] = num++;
+        }
+    }
+    printf("\n"); 
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) { 
+            printf("%d\t", matrix[i][j]); 
+        }
+        printf("\n"); 
+    } 
+    return 0; 
+}
