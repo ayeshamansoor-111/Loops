@@ -1,0 +1,110 @@
+#include <stdio.h>
+#include <math.h>
+void basic_op() {
+char operation;
+double a, b, result;
+printf("Enter two numbers >> ");
+scanf("%lf %lf", &a, &b);
+printf("Enter the operation (+, -, x, /, *, X): ");
+scanf(" %c", &operation);
+switch (operation) {
+case '+' :
+result = a + b;
+break;
+case '-' :
+result = a - b;
+break;
+case '*' :
+case 'x' :
+case 'X' :
+result = a * b;
+break;
+case '/' :
+if ( b != 0) {
+result = a / b; }
+else {
+printf("Error! Not divisible by 0!\n");
+return;
+}
+break;
+default:
+printf("Invalid Operator!\n");
+return;
+}
+printf("Result: %.3lf\n", result);
+}
+void adv_math () {
+char operator;
+double a, result;
+printf("Enter a number >> ");
+scanf("%lf", &a);
+printf("Enter operation (power, sqrt, abs): ");
+scanf(" %c", &operator);
+switch (operator) {
+case '^':
+result = pow(a, 2);
+break;
+case 's':
+result = sqrt(a);
+break;
+case 'a':
+result = fabs(a);
+break;
+default:
+printf("Invalid Input!\n");
+return;
+}
+
+printf("The result is: %.2lf\n", result);
+}
+void trig() {
+char operate;
+double a, result;
+printf("Enter angle in degree >> ");
+scanf("%lf", &a);
+printf("Enter the operator (sine, cos, tan): ");
+scanf(" %c", &operate);
+switch (operate) {
+case 's':
+result = sin(a * M_PI / 180.0);
+break;
+case 'c':
+result = cos(a * M_PI / 180.0);
+break;
+case 't':
+result = tan(a * M_PI / 180.0);
+break;
+default:
+printf("Invalid Operator!\n");
+return;
+}
+printf("The result is: %.2lf\n", result);
+}
+int main () {
+int choice;
+while (1) {
+printf("\nMain Menu: \n");
+printf("1. Basic Operations\n");
+printf("2. Advanced Math\n");
+printf("3. Trignonetry\n");
+printf("4. Quit\n");
+printf("Enter choice: ");
+scanf("%d", &choice);
+switch (choice) {
+case 1:
+basic_op();
+break;
+case 2:
+adv_math();
+break;
+case 3:
+trig();
+break;
+case 4:
+return 0;
+default:
+printf("Invalid choice!\n");
+}
+}
+return 0;
+}
