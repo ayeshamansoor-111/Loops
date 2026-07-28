@@ -1,0 +1,15 @@
+#include <stdio.h> 
+int main () {
+    int num; 
+    printf("Insert a number!\n"); 
+    scanf("%d\n", num); 
+    int i = 1; 
+    int square = num * num;
+    int cube = square * num;
+    while (i<=3) {
+        num= i + 1;
+        printf("Number   Sqaure   cube");
+        printf("%d        %d       %d", i, square, cube);
+    }
+    return 0; 
+}

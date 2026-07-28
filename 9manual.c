@@ -1,0 +1,19 @@
+#include <stdio.h> 
+int main () {
+    float num;
+    int  count = 0;
+    float sum = 0; 
+    while (1) { 
+    printf("Write down the number >>"); 
+    scanf("%f\n", &num); 
+    if (num == -1) {
+        break;
+    }
+    sum += num; 
+    count++
+}
+if (count > 0) {
+    printf("The average of the given %d numbers is .1%f\n", count; sum / count); 
+}
+return 0;     
+}
